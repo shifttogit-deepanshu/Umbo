@@ -1,0 +1,30 @@
+.loadscreen-container{
+    background-color: black;
+    width:100vw;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.umbo-text{
+    color:white;
+    font-size: 150px;
+    font-family: "ubuntu";
+    font-weight: 900;
+    animation-name: popup;
+    animation-duration: 2s;
+}
+
+@keyframes popup {
+    from{
+        position: relative;
+        top:50px;
+        opacity:0
+    }
+    to{
+        position: relative;
+        top:0px;
+        opacity: 1;
+    }
+}
