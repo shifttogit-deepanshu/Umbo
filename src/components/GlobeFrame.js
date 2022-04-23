@@ -6,7 +6,7 @@ const GlobeFrame = (props)=>{
     return (
         <div>
         <PrimaryScreen DATA={props.DATA}/>      
-        <Iframe url="https://radiant-peak-68160.herokuapp.com/"
+        <Iframe url="https://umbo-server.herokuapp.com/"
         id="myId"
         className="frame"
         />

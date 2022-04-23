@@ -6,28 +6,31 @@ import axios from "axios";
 const PrimaryScreen = (props)=>{
     const [data,setData] = useState(props.DATA.temp)
 
-
     useEffect(()=>{
+      const interval = setInterval(()=>{
         var config = {
-            method: 'get',
-            url: 'https://radiant-peak-68160.herokuapp.com/dbdata',
-            headers: { }
-          };
-          
-          axios(config)
-          .then(function (response) {
-            console.log(response.data);
-            setData(response.data)
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
+          method: 'get',
+          url: 'https://umbo-server.herokuapp.com/dbdata',
+          headers: { }
+        };
+        
+        axios(config)
+        .then(function (response) {
+          console.log(response.data);
+          setData(response.data)
+        })
+        .catch(function (error) {
+          console.log(error);
+        });
+      },3000)
+
+      return ()=>interval()       
           
     },[])
 
     return  (
         <BlurrWall>
-            <div class="primary-screen-container">
+            <div className="primary-screen-container">
                 <Dashboard data={data}/>
             </div>
         </BlurrWall>

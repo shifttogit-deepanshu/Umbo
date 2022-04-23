@@ -3,7 +3,7 @@
 import React,{useEffect,useState} from "react"
 import GlobeFrame from "./components/GlobeFrame"
 import LoadScreen from "./screens/LoadScreen"
-import axios from "axios"
+import axios from "axios";
 import "./styles/styles.scss"
 
 function App() {
@@ -14,7 +14,7 @@ function App() {
   useEffect(()=>{
     var config = {
         method: 'get',
-        url: 'https://radiant-peak-68160.herokuapp.com/dbdata',
+        url: 'https://umbo-server.herokuapp.com/dbdata',
         headers: { }
       };
       
@@ -34,8 +34,8 @@ function App() {
 
   return (
     <div className="App">
-      {/* {loading?<LoadScreen/>:<GlobeFrame DATA={weatherData}/>} */}
-      <LoadScreen />
+      {loading?<LoadScreen/>:<GlobeFrame DATA={weatherData}/>}
+      {/* <LoadScreen /> */}
     </div>
   );
 }

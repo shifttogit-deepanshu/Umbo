@@ -1,6 +1,7 @@
 .text-head{
     color:rgb(199, 199, 199);
-    margin:10px;
+    margin:20px;
+    margin-left:10px;
     font-size:30px;
     font-weight: 900;
     font-family: "ubuntu";
@@ -10,7 +11,70 @@
     color:white;
     font-size:140px;
     font-weight: 900;
+    margin-left:10px;
     font-family: "ubuntu";
-    margin:20px;
-    margin-left:20px;
+    animation-name: fadein;
+    animation-duration: 0.5s;
+}
+
+.text-loc{
+    color:white;
+    font-size:30px;
+    margin-top:20px;
+    margin-left:10px;
+    font-weight: 900;
+    font-family: "ubuntu";
+    animation-name: fadein;
+    animation-duration: 0.5s;
+}
+
+.text-time{
+    color:white;
+    font-size:30px;
+    margin-top:20px;
+    margin-left:10px;
+    font-weight: 900;
+    font-family: "ubuntu";
+    animation-name: fadein;
+    animation-duration: 0.5s;
+}
+.sun{
+    background-image:linear-gradient(rgba(212, 181, 5, 0.6),rgba(212, 62, 7, 0.572));
+    height:200px;
+    width:200px;
+    border-radius: 50%;
+    position: absolute;
+    top:50px;
+    right:200px;
+}
+
+.time-container{
+    position: absolute;
+    right:20px;
+    bottom:30px;
+    margin-top:20px;
+}
+
+.text-time-loc{
+    font-size: 20px;
+    color:rgb(177, 177, 177);
+    font-weight:900;
+    margin-bottom:10px;
+}
+
+.desc{
+    background-color: rgba(112, 112, 112, 0.313);
+    padding:15px;
+    border-radius: 10px;
+    padding-left:20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+@keyframes fadein {
+    from{
+        opacity:0
+    }
+    to{
+        opacity:1
+    }
 }
