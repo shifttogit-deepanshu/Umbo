@@ -38,14 +38,20 @@
     animation-name: fadein;
     animation-duration: 0.5s;
 }
+
+.weth-logo{
+    position: absolute;
+    top:50px;
+    right:200px;
+    // background-color: red;
+    width:300px;
+}
+
 .sun{
     background-image:linear-gradient(rgba(212, 181, 5, 0.6),rgba(212, 62, 7, 0.572));
     height:200px;
     width:200px;
-    border-radius: 50%;
-    position: absolute;
-    top:50px;
-    right:200px;
+    border-radius: 50%;  
 }
 
 .time-container{
@@ -70,6 +76,31 @@
     padding-bottom: 20px;
     margin-bottom: 20px;
 }
+
+.text-location{
+    font-size:22px;
+}
+.clouds{
+    opacity: 0.85;
+    position: absolute;
+    bottom:-30px;
+}
+
+.rain-logo{
+    opacity: 0.7;
+}
+
+.sun-clouds{
+    position: absolute;
+    bottom:-20px;
+    right:-20px;
+}
+
+.thunder{
+    opacity:0.7;
+    width:180px;
+}
+
 @keyframes fadein {
     from{
         opacity:0

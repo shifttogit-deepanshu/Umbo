@@ -1,11 +1,12 @@
 .blackContainer-container{
-    width:50%;
-    height:55%;
-    margin:50px;
+    width:100%;     
+    flex:1;
     background-color: rgba(57, 57, 57, 0.492);
     backdrop-filter: blur(20px);
     border-radius: 20px;
     // box-shadow: inset 0px 0px 5px black;
     padding:30px;
     box-sizing: border-box;
+    margin:20px;
+    min-height:600px;
 }

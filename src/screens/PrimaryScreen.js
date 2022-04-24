@@ -1,7 +1,10 @@
-import React,{useEffect,useState} from "react";
+import React,{useEffect,useState,Image} from "react";
 import Dashboard from "../components/Dashboard";
 import BlurrWall from "../components/BlurWall";
 import axios from "axios";
+import Control from "../components/Control";
+import Connection from "../components/Connection";
+import globe from "../assets/Frame 1.png";
 
 const PrimaryScreen = (props)=>{
     const [data,setData] = useState(props.DATA.temp)
@@ -31,8 +34,15 @@ const PrimaryScreen = (props)=>{
     return  (
         <BlurrWall>
             <div className="primary-screen-container">
-                <Dashboard data={data}/>
+                <div class="left-container">
+                  <Dashboard data={data}/>
+                  <Control />
+                </div>
+                <div class="right-container">
+                  <Connection />
+                </div>
             </div>
+            <img src={globe} width="100%" className="globe"/>
         </BlurrWall>
         
         
