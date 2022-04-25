@@ -1,9 +1,8 @@
 import React from "react";
-import SVGThunder from "./SVGThunder";
 
 const ControlBtn = (props)=>{
     return (
-        <div className="control-btn-container">
+        <div className={props.isOn?"control-btn-container--on":"control-btn-container"}>
             {props.children}
         </div>
     )

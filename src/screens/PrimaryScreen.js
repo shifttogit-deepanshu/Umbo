@@ -36,7 +36,7 @@ const PrimaryScreen = (props)=>{
             <div className="primary-screen-container">
                 <div class="left-container">
                   <Dashboard data={data}/>
-                  <Control />
+                  <Control data={data}/>
                 </div>
                 <div class="right-container">
                   <Connection />

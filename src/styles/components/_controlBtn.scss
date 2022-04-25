@@ -1,5 +1,17 @@
 .control-btn-container{
-    background-color: rgba(112, 112, 112, 0.313);
+    background-color: rgba(112, 112, 112, 0.33);
+    height: 100%;
+    width:20%;
+    margin:20px;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.control-btn-container--on{
+    background-color: rgba(255, 255, 255, 0.389);
     height: 100%;
     width:20%;
     margin:20px;
@@ -11,6 +23,6 @@
 }
 
 .control-btn-container:hover{
-    background-color: rgba(235, 235, 235, 0.313);
+    background-color: rgba(235, 235, 235, 0.255);
     transition-duration: 0.05s;
 }
