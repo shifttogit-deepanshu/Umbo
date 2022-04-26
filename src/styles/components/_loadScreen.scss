@@ -5,6 +5,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .umbo-text{
@@ -12,6 +13,11 @@
     font-size: 150px;
     font-family: "ubuntu";
     font-weight: 900;
+    animation-name: popup;
+    animation-duration: 2s;
+}
+
+.loader{
     animation-name: popup;
     animation-duration: 2s;
 }

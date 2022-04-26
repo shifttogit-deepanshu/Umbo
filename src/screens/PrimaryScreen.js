@@ -5,6 +5,7 @@ import axios from "axios";
 import Control from "../components/Control";
 import Connection from "../components/Connection";
 import globe from "../assets/Frame 1.png";
+import ColorPicker from "../components/ColorPicker";
 
 const PrimaryScreen = (props)=>{
     const [data,setData] = useState(props.DATA.temp)
@@ -34,15 +35,16 @@ const PrimaryScreen = (props)=>{
     return  (
         <BlurrWall>
             <div className="primary-screen-container">
-                <div class="left-container">
+                <div className="left-container">
                   <Dashboard data={data}/>
                   <Control data={data}/>
                 </div>
-                <div class="right-container">
+                <div className="right-container">
                   <Connection />
                 </div>
             </div>
             <img src={globe} width="100%" className="globe"/>
+            <div className="color-picker-container"><ColorPicker /></div>
         </BlurrWall>
         
         

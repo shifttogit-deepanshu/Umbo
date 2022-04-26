@@ -34,8 +34,8 @@ function App() {
 
   return (
     <div className="App">
-      {loading?<LoadScreen/>:<GlobeFrame DATA={weatherData}/>}
-      {/* <LoadScreen /> */}
+      {/* {loading?<LoadScreen/>:<GlobeFrame DATA={weatherData}/>} */}
+      <LoadScreen />
     </div>
   );
 }
