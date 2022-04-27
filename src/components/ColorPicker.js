@@ -1,19 +1,37 @@
 import React,{useState,useEffect} from "react"
-import {SketchPicker}  from 'react-color';
+import { HuePicker }   from 'react-color'
+import axios from "axios"
 
-const ColorPicker = ()=>{
+const ColorPicker = (props)=>{
 
-    const [color,setColor] = useState(null)
+    const [color,setColor] = useState({rgb:{r:0,g:0,b:0}})
 
-    const handleChangeComplete = (res)=>{
-        console.log(res)
-        setColor(res)
+    const handleChangeComplete = (color,event)=>{
+        console.log(color)
+        var config = {
+            method: 'get',
+            url: `https://umbo-server.herokuapp.com/lights?r=${color.rgb.r}&g=${color.rgb.g}&b=${color.rgb.b}`,
+            headers: { }
+          };          
+          axios(config)
+          .then(function (response) {
+            console.log(JSON.stringify(response.data));
+            setColor(color)
+            props.colorPicked(color.rgb.r,color.rgb.g,color.rgb.b)
+          })
+          .catch(function (error) {
+            console.log(error);
+          });
+          
     }
     return (
-        <SketchPicker
-        color={ color }
-        onChangeComplete={ ()=>handleChangeComplete() }
+        <div className="color-picker">
+            <HuePicker  
+            color={ color }
+            onChangeComplete={ handleChangeComplete }
       />
+        </div>
+        
     )
 }
 
