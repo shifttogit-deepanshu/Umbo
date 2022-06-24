@@ -1,20 +1,17 @@
-import React,{useEffect,useState,Image} from "react";
+import React,{useEffect,useState} from "react";
 import Dashboard from "../components/Dashboard";
-import BlurrWall from "../components/BlurWall";
 import axios from "axios";
 import Control from "../components/Control";
 import Connection from "../components/Connection";
-import globe from "../assets/Frame 1.png";
-
 
 const PrimaryScreen = (props)=>{
     const [data,setData] = useState(props.DATA.temp)
 
     useEffect(()=>{
-      const interval = setInterval(()=>{
+      const intervalId = setInterval(()=>{
         var config = {
           method: 'get',
-          url: 'https://umbo-server.herokuapp.com/dbdata',
+          url: 'http://umbo-server.herokuapp.com/dbdata',
           headers: { }
         };
         
@@ -28,12 +25,12 @@ const PrimaryScreen = (props)=>{
         });
       },3000)
 
-      return ()=>interval()       
+      return ()=>clearInterval(intervalId)       
           
     },[])
 
     return  (
-        <BlurrWall>
+      <div className={props.shouldDisplay?"main":"main--hidden"}>
             <div className="primary-screen-container">
                 <div className="left-container">
                   <Dashboard data={data}/>
@@ -41,12 +38,9 @@ const PrimaryScreen = (props)=>{
                 </div>
                 <div className="right-container">
                   <Connection />
-                </div>
-                <img src={globe} width="100%" className="globe"/>
-            </div>            
-        </BlurrWall>
-        
-        
+                </div>         
+            </div>       
+        </div>         
     )
 }
 

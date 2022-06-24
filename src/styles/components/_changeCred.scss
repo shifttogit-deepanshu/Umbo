@@ -1,0 +1,37 @@
+.change_cred{
+    width:100px;
+    height:100px;
+    background-color: rgba(57, 57, 57, 0.492);
+    backdrop-filter: blur(20px);
+    border-radius: 50%;
+    box-sizing: border-box;
+    border:none;
+}
+
+.change_cred:hover{
+    background-color: rgba(173, 173, 173, 0.492);
+    transition-duration:0.5s;
+}
+
+.cred_container{
+    position:absolute;
+    top:50px;
+    right:50px;
+}
+
+.cred-form{
+    display: flex;
+    flex-direction: column;
+    width:100%;
+    min-width:500px;
+}
+
+input{
+    margin:20px;
+    padding:20px;
+}
+
+.cred_head{
+    color:white;
+    margin:20px;
+}

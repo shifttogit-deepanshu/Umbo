@@ -1,0 +1,25 @@
+.modal{
+    position: absolute;
+    padding:200px;
+    margin:auto;
+    background-color: rgba(33, 33, 33, 0.992);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width:500px;
+    align-self: center;
+}
+
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(74, 74, 74, 0.751);
+    backdrop-filter: blur(20px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
