@@ -10,4 +10,9 @@
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    @media(max-width:900px) {
+        flex-direction: column;
+        padding:5px;
+        height:100%;
+    }
 }

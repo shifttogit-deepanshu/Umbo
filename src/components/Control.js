@@ -23,7 +23,7 @@ const Control = (props)=>{
         setLights_g(props.data.lights_g)
         setLights_b(props.data.lights_b)
        
-    })   
+    },[props.data])   
     
     const handleRoute = (route)=>{
         var config = {

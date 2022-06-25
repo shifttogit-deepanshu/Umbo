@@ -25,7 +25,7 @@ const Connection = ()=>{
     return (
         <div className="connection-container">
             <div class="txt"><div className="conn-sym"></div><div className="connected-txt">Umbo Connected</div></div>
-            <img src={umodel} className="rain-logo" width="150"/>
+            <img src={umodel} className="rain-logo" alt="weather-logo"/>
             <div className="cred_container" ><ChangeCred handleClick={()=>openModal()}/></div>
             <Modal
                 isOpen={modalIsOpen}

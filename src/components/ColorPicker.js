@@ -8,7 +8,7 @@ const ColorPicker = (props)=>{
 
     useEffect(()=>{
       setColor({r:props.setColors[0],g:props.setColors[1],b:props.setColors[2]})
-    })
+    },[props.setColors])
     
     const handleChangeComplete = (color,event)=>{
         console.log(color.r)

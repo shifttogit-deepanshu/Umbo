@@ -30,7 +30,7 @@ const Dashboard = (props)=>{
         setLat(props.data.lat)
         setLon(props.data.lon)
         setMain(props.data.main)
-
+        
         if (lat & lon)
         {
             console.log("lat..........",lat)
@@ -51,11 +51,20 @@ const Dashboard = (props)=>{
             console.log(error);
           });}
         
-    })
+    },[props.data,lat,lon])
 
     return (
+        <div className="dashboard-main-container">
         <BlackContainer >
             <div className="text-head">Weather</div>
+            <div className="weth-logo">
+                    {main === "Clear" && <div className="sun" ></div>}
+                    {main === "Thunder" && <div className="logo"><img src={thunder} className="thunder" width="180px" alt="thunder"/></div>}
+                    {main === "Clouds" && <div className="sun" ><img src={logo} className="sun-clouds" width="100%" alt="clouds"/></div>}
+                    {main === "Snow" && <img src={snow} width="200" alt="snow"/>}
+                    {main === "Rain" && <img src={rain} className="rain-logo" width="200" alt="rain"/>} 
+                </div>
+
             <div className="temp-container">
                 {tempe && <div className="text-temp">{(tempe-273).toFixed(2)}°</div>}
                 {(locName && state && country) && <div className="text-loc text-location">{locName}, {state}<br/> {country}</div>}
@@ -63,16 +72,10 @@ const Dashboard = (props)=>{
                 <div class="time-container">{locName && <div className="text-loc text-time-loc">Time in {locName}</div>}
                 {(currentTime && timeZone) && <Moment className="text-time" format="DD MMM   h:mm a">{currentTime - 19800*1000}</Moment>}
                 </div>
-                {description && <div className="text-loc desc">{description}</div>}
-                <div className="weth-logo">
-                    {main == "Clear" && <div className="sun" ></div>}
-                    {main == "Thunder" && <div className="logo"><img src={thunder} className="thunder" width="180px"/></div>}
-                    {main == "Clouds" && <div className="sun" ><img src={logo} className="sun-clouds" width="100%"/></div>}
-                    {main == "Snow" && <img src={snow} width="200"/>}
-                    {main == "Rain" && <img src={rain} className="rain-logo" width="200"/>} 
-                </div>
+                {description && <div className="text-loc desc">{description}</div>}                
             </div>
         </BlackContainer>
+        </div>
     )
 }
 

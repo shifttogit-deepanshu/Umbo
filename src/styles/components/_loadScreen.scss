@@ -15,6 +15,10 @@
     font-weight: 900;
     animation-name: popup;
     animation-duration: 2s;
+
+    @media(max-width:600px) {
+        font-size: 48px;
+    }
 }
 
 .loader{

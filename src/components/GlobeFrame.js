@@ -14,7 +14,7 @@ const GlobeFrame = (props)=>{
         id="myId"
         className="frame"
         />
-        <button onClick={()=>setEarth(!earth)}><img src={globe} width="100%" className="globe"/></button>     
+        <div onClick={()=>setEarth(!earth)}><img src={globe} className="globe"/></div>     
         </div>
     )
 }

@@ -6,8 +6,8 @@ const LoadScreen = ()=>{
         <div className="loadscreen-container">
             <div className="umbo-text">Umbo</div>
             <div className="loader"><BallTriangle
-                heigth="40"
-                width="40"
+                heigth="30"
+                width="30"
                 color="white"
                 ariaLabel="loading-indicator"               
                 /></div>
