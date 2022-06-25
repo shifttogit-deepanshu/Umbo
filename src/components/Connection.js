@@ -34,7 +34,7 @@ const Connection = ()=>{
                 contentLabel="Example Modal"
                 overlayClassName="modal-overlay"
                 className="modal"
-            >
+            >   <button className="exit" onClick={()=>closeModal()}>X</button>
                 <ConnectionForm closeForm={()=>closeModal()}/>
       </Modal>
         </div>

@@ -76,7 +76,13 @@
         right:50px;
     }
     @media(max-width:900px) {
-        display: none;
+        position:fixed;
+        height:70px;
+        width:70px;
+        bottom:20px;
+        right:20px;
+        opacity:0.9;
+        // display: none;
     }
     
 }
