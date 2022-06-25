@@ -36,7 +36,7 @@ const Dashboard = (props)=>{
             console.log("lat..........",lat)
             var config = {
             method: 'get',
-            url: `http://api.openweathermap.org/geo/1.0/reverse?lat=${props.data.lat}&lon=${props.data.lon}&limit=1&appid=b38e7738b387d4dc0bbf9fe1dfe668cb`,
+            url: `https://api.openweathermap.org/geo/1.0/reverse?lat=${props.data.lat}&lon=${props.data.lon}&limit=1&appid=b38e7738b387d4dc0bbf9fe1dfe668cb`,
             headers: { }
           };
           

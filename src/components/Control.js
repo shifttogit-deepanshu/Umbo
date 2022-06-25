@@ -28,7 +28,7 @@ const Control = (props)=>{
     const handleRoute = (route)=>{
         var config = {
             method: 'get',
-            url: 'http://umbo-server.herokuapp.com/'+ route,
+            url: 'https://umbo-server.herokuapp.com/'+ route,
             headers: { }
           };
           

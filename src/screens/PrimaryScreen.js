@@ -11,7 +11,7 @@ const PrimaryScreen = (props)=>{
       const intervalId = setInterval(()=>{
         var config = {
           method: 'get',
-          url: 'http://umbo-server.herokuapp.com/dbdata',
+          url: 'https://umbo-server.herokuapp.com/dbdata',
           headers: { }
         };
         

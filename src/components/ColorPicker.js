@@ -14,7 +14,7 @@ const ColorPicker = (props)=>{
         console.log(color.r)
         var config = {
             method: 'get',
-            url: `http://umbo-server.herokuapp.com/lights?r=${color.rgb.r}&g=${color.rgb.g}&b=${color.rgb.b}`,
+            url: `https://umbo-server.herokuapp.com/lights?r=${color.rgb.r}&g=${color.rgb.g}&b=${color.rgb.b}`,
             headers: { }
           };          
           axios(config)
