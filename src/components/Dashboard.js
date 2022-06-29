@@ -70,7 +70,7 @@ const Dashboard = (props)=>{
                 {(locName && state && country) && <div className="text-loc text-location">{locName}, {state}<br/> {country}</div>}
                 
                 <div class="time-container">{locName && <div className="text-loc text-time-loc">Time in {locName}</div>}
-                {(currentTime && timeZone) && <Moment className="text-time" format="DD MMM   h:mm a">{currentTime - 19800*1000}</Moment>}
+                {(currentTime && timeZone) && <Moment className="text-time" format="DD MMM h:mm a">{currentTime - 19800*1000}</Moment>}
                 </div>
                 {description && <div className="text-loc desc">{description}</div>}                
             </div>
