@@ -11,24 +11,29 @@ function App() {
   const [loading,setLoading] = useState(true)
   const [weatherData,setWeatherData] = useState()
 
-  useEffect(()=>{
+
+  const getData = ()=>{
     var config = {
-        method: 'get',
-        url: 'https://umbo-server.herokuapp.com/dbdata',
-        headers: { }
-      };
-      
-      axios(config)
-      .then(function (response) {
-        console.log(response.data);
-        setWeatherData(response.data)
-        setLoading(false)       
-      })
-      .catch(function (error) {
-        console.log(error);
-        // setLoading(false)
-      });
-      
+      method: 'get',
+      url: 'https://umbo-server.herokuapp.com/dbdata',
+      headers: { }
+    };
+    
+    axios(config)
+    .then(function (response) {
+      console.log(response.data);
+      setWeatherData(response.data)
+      setLoading(false)       
+    })
+    .catch(function (error) {
+      console.log(error);
+      // setLoading(false)
+      getData()
+    });
+  }
+
+  useEffect(()=>{
+    getData()      
     },[])
 
 
